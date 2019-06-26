@@ -1,10 +1,22 @@
 import React, { Component } from "react";
+import Routing from "../routes";
+import { transitions, positions, Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+import "../css/bootstra.css";
+import "../css/app.css";
+const options = {
+  timeout: 5000,
+  position: positions.MIDDLE_RIGHT,
+  transition: transitions.SCALE
+};
 class App extends Component {
   render() {
     return (
-      <div data-test="c-app">
-        <h1>My React App </h1>
-      </div>
+      <AlertProvider template={AlertTemplate} {...options}>
+        <div className="content" data-test="c-app">
+          <Routing />
+        </div>
+      </AlertProvider>
     );
   }
 }
