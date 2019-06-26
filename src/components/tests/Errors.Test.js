@@ -1,14 +1,14 @@
-import App from "../App";
+import NotFound from "../400/NotFound";
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import basic_tests from "./Base.test";
 
-test("<App> Renders without crashing", () => {
+test("<Home> Renders without crashing", () => {
   const wrapper = mount(
     <Provider store={store}>
-      <App />
+      <NotFound />
     </Provider>
   );
-  basic_tests(wrapper, "c-app");
+  basic_tests(wrapper, "c-not-found");
 });

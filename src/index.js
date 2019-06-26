@@ -8,11 +8,12 @@ import myReducers from "./redux/reducers";
 const initialState = {
   candidates: []
 };
+
 const store = createStore(myReducers, initialState);
 
-ReactDOM.render(
+const Root = () => (
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById("app")
+  </Provider>
 );
+ReactDOM.render(<Root />, document.getElementById("app"));
