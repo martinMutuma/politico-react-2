@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/martinMutuma/politico-react-2#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",

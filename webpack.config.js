@@ -8,6 +8,9 @@ module.exports = {
     path: path.join(__dirname, "/dist"),
     filename: "index_bundel.js"
   },
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {

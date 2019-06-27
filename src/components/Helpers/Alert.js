@@ -1,39 +1,36 @@
 import React, { Component } from "react";
-import displayMessage from "../../redux/actions/messageAction";
+import "@babel/polyfill";
 import { connect } from "react-redux";
 import { withAlert } from "react-alert";
 
-class ShowAlert extends Component {
+export class ShowAlertComponent extends Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    if (this.props.message) {
-      this.props.alert.success(this.props.message);
+  async componentDidMount() {
+    const { message, alert } = this.props;
+    if (message) {
+      alert.success(message);
     }
   }
   componentDidUpdate(prevProps) {
-    if (this.props.message !== prevProps.message) {
-      this.props.alert.success(this.props.message);
+    const { message, alert } = this.props;
+
+    if (message !== prevProps.message) {
+      alert.success(message);
     }
   }
 
   render() {
-    return <div />;
+    return <div data-test="c-alert" />;
   }
 }
 
 const mapStateToProps = state => ({
   message: state.message
 });
-const mapDispatchToProps = (state, ownProps) => {
-  return {
-    displayMessage
-  };
-};
-
 export default connect(
   mapStateToProps,
   null
-)(withAlert()(ShowAlert));
+)(withAlert()(ShowAlertComponent));
