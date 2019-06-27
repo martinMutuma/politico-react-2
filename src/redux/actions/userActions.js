@@ -1,7 +1,6 @@
-import {actionTypes} from '../../actionTypes'
+import actionTypes from "../actionTypes";
 
-export const storeLoggedInUserDetails = userDetails =>({
-    type:actionTypes.UPDATE_LOGIN_DETAILS,
-    payload:userDetails
-})
-
+export const storeLoggedInUserDetails = userDetails => ({
+  type: actionTypes.UPDATE_LOGIN_DETAILS,
+  payload: userDetails
+});

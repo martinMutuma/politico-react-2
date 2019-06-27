@@ -1,9 +1,9 @@
-import { actionTypes } from "../../actionTypes";
-import Candidates from "../../components/container/Candidates";
+import actionTypes from "../actionTypes";
 
-export const storeListCandidates = candidates => {
+const storeListCandidates = candidates => {
   return {
     type: actionTypes.LIST_CANDIDATES,
     payload: [...candidates]
   };
 };
+export default storeListCandidates;

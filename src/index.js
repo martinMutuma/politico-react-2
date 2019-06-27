@@ -1,15 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import myReducers from "./redux/reducers";
-
-const initialState = {
-  candidates: []
-};
-
-const store = createStore(myReducers, initialState);
+import store from "./redux/store";
 
 const Root = () => (
   <Provider store={store}>

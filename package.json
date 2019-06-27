@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "test": "jest  --coverage --watchALL "
+    "test": "jest  --coverage --watch"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/martinMutuma/politico-react-2#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-alert": "^5.5.0",
@@ -46,6 +47,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-enzyme": "^7.0.2",
+    "jest-mock-axios": "^3.0.0",
     "react-test-renderer": "^16.8.6",
     "style-loader": "^0.23.1",
     "url-loader": "^2.0.1",

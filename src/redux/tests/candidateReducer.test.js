@@ -1,5 +1,5 @@
-import candidateReducer from "../candidateReducer";
-import { actionTypes } from "../../actionTypes";
+import candidateReducer from "../reducers/candidateReducer";
+import actionTypes from "../actionTypes";
 
 describe("Candidates reducer", () => {
   it("should return the initial state", () => {
