@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter, NavLink } from "react-router-dom";
-
 const Navbar = props => {
   return (
     <div>

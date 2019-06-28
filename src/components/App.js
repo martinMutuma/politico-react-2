@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Routing from "../routes";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+import ShowAlert from "./Helpers/Alert";
+
 import "../css/bootstra.css";
 import "../css/app.css";
 const options = {
@@ -16,6 +18,7 @@ class App extends Component {
         <div className="content" data-test="c-app">
           <Routing />
         </div>
+        <ShowAlert />
       </AlertProvider>
     );
   }
