@@ -5,6 +5,7 @@ import Navbar from "./components/Nav/Nav";
 import PrivateRoute from "./components/hoc/PrivateRoute";
 import NotFound from "./components/400/NotFound";
 import Login from "./components/Login/Login";
+import ListCandidates from "./components/Candidates/ListCandidates";
 
 const Routing = () => {
   return (
@@ -13,6 +14,9 @@ const Routing = () => {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <PrivateRoute exact path="/candidates" component={ListCandidates} />
+
         <Route component={NotFound} />
       </Switch>
     </Router>

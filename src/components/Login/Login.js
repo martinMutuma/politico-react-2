@@ -16,11 +16,12 @@ class Login extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.props.display_message("Logging in ........");
+    const { display_message, history } = this.props;
+    display_message("Logging in ........");
     loginUser(this.state).then(status => {
       if (status) {
-        this.props.display_message("Login succesfull");
-        this.props.history.push("/");
+        display_message("Login succesfull");
+        history.push("/");
       }
     });
   }
